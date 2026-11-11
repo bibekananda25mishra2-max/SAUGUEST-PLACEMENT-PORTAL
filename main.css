@@ -1,0 +1,219 @@
+.banner {
+  background: linear-gradient(to right, #0a50a1, #08d195);
+  height: 80px;
+  min-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  position: -webkit-sticky;
+  /* For Safari support */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.banner2 {
+  background: linear-gradient(to right, #0a50a1, #08d195);
+  height: 80px;
+  min-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+}
+
+.bannerbutton {
+  background: transparent;
+  border: transparent;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bannerbutton:hover {
+  background-color: white;
+  color: #0a50a1;
+  transform: scale(1.10);
+  border-radius: 5px;
+  border: 5px solid transparent;
+}
+
+.flexbox {
+  display: flex;
+  /* Activates Flexbox */
+  flex-direction: row;
+  /* Aligns items side-by-side (default) */
+  justify-content: center;
+  /* Centers items horizontally */
+  align-items: center;
+  /* Centers items vertically */
+  gap: 15px;
+  /* Adds spacing between the items */
+}
+
+.flex-item1 {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  word-spacing: 10px;
+  line-height: 25px;
+  justify-content: center;
+}
+
+.flex-item2 {
+  border: 5px;
+  background-image: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(to right, #0a50a1, #08d195) border-box;
+  border-radius: 5px;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  word-spacing: 10px;
+  line-height: 25px;
+  justify-content: safe;
+}
+
+/* this code for testing purposes only:  */
+.testflex-item2 {
+  width: 420px;
+  height: 260px;
+  border-radius: 24px;
+  border: 6px solid transparent;
+  padding: 3px;
+  background-image: linear-gradient(to right, #0a50a1, #08d195) 1;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* testing ends here-- */
+.flex-item2:hover {
+  border: 5px transparent;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #0a50a1, #08d195);
+  color: white;
+  transform: scale(1.08);
+}
+
+.non-flex1 {
+  border: 5px transparent;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  word-spacing: 10px;
+  line-height: 25px;
+  justify-content: center;
+}
+
+.non-flex1:hover {
+  border: 5px transparent;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #0a50a1, #08d195);
+  color: white;
+  transform: scale(1.05);
+}
+
+.nonflex-heading1 {
+  color: #0a50a1;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  text-align: center;
+}
+
+.parent-card {
+  display: flex;
+  /* Activates Flexbox */
+  flex-direction: row;
+  /* Aligns items horizontally (default) */
+  flex-wrap: wrap;
+  /* Allows cards to wrap to the next line if the screen is too narrow */
+  justify-content: center;
+  /* Centers cards horizontally in the row */
+  gap: 20px;
+  /* Creates clean spacing between the cards */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #d4d4d4;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.card:hover {
+  background-image: linear-gradient(to right, #0a50a1, #08d195);
+  transform: scale(1.25)
+}
+
+.flex-item3 {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  word-spacing: 10px;
+  line-height: 25px;
+  justify-content: center;
+}
+
+.flex-item3:hover {
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #f53636, #fc9b4c);
+  color: #0a50a1;
+  transform: scale(1.25);
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  /* Keeps it responsive */
+}
+
+.centered-image:hover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  /* Keeps it responsive */
+  transform: scale(1.15);
+}
+
+.card2 {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+.card2:hover {
+  background-image: linear-gradient(to right, #0a50a1, #08d195);
+  transform: scale(1.25);
+  color: white;
+}
+
+.cardachivements {
+  background-color: #d4d4d4;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
