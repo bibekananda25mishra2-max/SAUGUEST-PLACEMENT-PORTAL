@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLACEMENT PORTAL | SAU | RECRUITERS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="banner"><img src="sauicon.jpg" width="80px" height="80px"><span
+            style="display: inline-block; width: 35px;text-align: center;"></span><span> RECRUITER | PLACEMENT PORTAL | SOUTH ASIAN
+            UNIVERSITY</span> </div>
+    <div class="banner2"> <span style="display: inline-block; width: 75px;"></span> <span
+            style="font-size: 14px;"><button class="bannerbutton">HOME</button></span><span
+            style="display: inline-block; width: 5px;"></span> <span style="font-size: 14px;"><button
+                class="bannerbutton">ABOUT</button></span><span style="display: inline-block; width: 5px;"></span> <span
+            style="font-size: 14px;"><button class="bannerbutton">ALUMINI</button></span> </div>
+            <div  class="nonflex-heading1" style="text-align: left;">
+<h1> COMPANY DETAILS </h1>
+            </div>
+
+<form id="emailForm">
+        <h2>Send Email Notification</h2>
+        
+        <label for="senderEmail">Sender Email (From):</label>
+        <input type="email" id="senderEmail" required placeholder="sender@example.com">
+
+        <label for="receiverEmail">Receiver Email (To):</label>
+        <input type="email" id="receiverEmail" required placeholder="receiver@example.com">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" required placeholder="Important Update">
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required placeholder="Type your message here..."></textarea>
+
+        <button type="submit">Send Notification</button>
+        <p id="status"></p>
+    </form>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const statusText = document.getElementById('status');
+            statusText.style.color = 'black';
+            statusText.textContent = 'Sending...';
+
+            const formData = {
+                senderEmail: document.getElementById('senderEmail').value,
+                receiverEmail: document.getElementById('receiverEmail').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    statusText.style.color = 'green';
+                    statusText.textContent = 'Email sent successfully!';
+                    document.getElementById('emailForm').reset();
+                } else {
+                    statusText.style.color = 'red';
+                    statusText.textContent = 'Error: ' + result.error;
+                }
+            } catch (error) {
+                statusText.style.color = 'red';
+                statusText.textContent = 'Failed to connect to the server.';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
